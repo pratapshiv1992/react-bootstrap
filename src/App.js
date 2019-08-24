@@ -8,7 +8,7 @@ import './App.css';
 const App = (props)=> {
     return <Container>
             <Navbar />
-            <Row className="justify-content-md-center"><BookAService /></Row>
+            <BookAService />
           </Container>
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Navbar,Nav} from 'react-bootstrap';
+import {Navbar,Nav,Image} from 'react-bootstrap';
+import Circle from '../assets/images/circle.png';
 
 const NavBar = (props)=>{
     return <Navbar>
@@ -7,9 +8,9 @@ const NavBar = (props)=>{
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
             <Nav id="justify-content-end">
-                <Nav.Link href="">Learn</Nav.Link>
-                <Nav.Link href="">Book</Nav.Link>
-                <Nav.Link href=""><span>O</span></Nav.Link>
+                <Nav.Link href="" className="text-bold color-black">Learn</Nav.Link>
+                <Nav.Link href="" className="text-bold color-black">Book</Nav.Link>
+                <Image src={Circle} roundedCircle style={{height:"50px",width:"50px"}} />
             </Nav>
         </Navbar.Collapse>
     </Navbar>
