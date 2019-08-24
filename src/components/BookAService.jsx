@@ -1,16 +1,7 @@
 import React from 'react';
 import {Tab, Row, Col, Nav,Container} from 'react-bootstrap';
 import SelectService from '../components/SelectService';
-
-const Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem " +
-    "Ipsum has of the printing and typesetting industry. Lorem Ipsum has $$"
-
-const dripData = [
-    {dripName: "Drip #1", dripText: Text},
-    {dripName: "Drip #2", dripText: Text},
-    {dripName: "Drip #3", dripText: Text}
-]
-
+import {dripData} from '../resources/dummyData';
 
 const BookAService = () => {
     return (
