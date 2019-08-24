@@ -6,9 +6,9 @@ const Text = "Lorem Ipsum is simply dummy text of the printing and typesetting i
 
 const dripData = [
     {dripName: "Drip #1", dripText: Text},
-    {dripName: "Drip #2", dripMessage: Text},
-    {dripName: "Drip #3", dripMessage: Text},
-    {dripName: "Drip #4", dripMessage: Text}
+    {dripName: "Drip #2", dripText: Text},
+    {dripName: "Drip #3", dripText: Text},
+    {dripName: "Drip #4", dripText: Text}
 ]
 
 
