@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tab, Row, Col, Nav} from 'react-bootstrap';
+import {Tab, Row, Col, Nav,Container} from 'react-bootstrap';
 import SelectService from '../components/SelectService';
 import ServiceDateTime from '../components/ServiceDateTime';
 import {dripData} from '../resources/dummyData';
@@ -7,7 +7,7 @@ import {days, timeSlots} from '../resources/dummyData';
 
 const BookAService = () => {
     return (
-        <div>
+        <Container>
             <div>Book a service</div>
             <Tab.Container id="left-tabs-example" defaultActiveKey="dateTime">
                 <Row>
@@ -29,7 +29,7 @@ const BookAService = () => {
                     </Col>
                 </Row>
             </Tab.Container>
-        </div>
+        </Container>
     );
 }
 

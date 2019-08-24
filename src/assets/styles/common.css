@@ -1,8 +1,14 @@
-.text-bold{
-  font-weight:bold;
+.brand {
+    font-size: medium;
+    font-family: Arial;
+    color: #696563 !important;
 }
 
-.color-black{
-  color: black;
-
+.nav-link {
+    color: black !important;
+    font-weight: bolder;
+    font-size: large;
+    font-family: Arial;
+    padding-top: 17px;
+    padding-right: 12px !important;
 }
