@@ -16,11 +16,14 @@ const TableBody = ({timeSlots = []}) => {
     </tbody>
 }
 
-const ServiceDateTime = ({days,timeSlots}) => {
-    return <table class="table table-borderless">
-        <TableHead days={days}/>
-        <TableBody timeSlots={timeSlots}/>
-    </table>
+const ServiceDateTime = ({days, timeSlots, selectedService={}}) => {
+    return <div>
+        <h3>You're booking {selectedService.dripName} (60 Minute duration)</h3>
+        <table class="table table-borderless">
+            <TableHead days={days}/>
+            <TableBody timeSlots={timeSlots}/>
+        </table>
+    </div>
 }
 
 export default ServiceDateTime;
