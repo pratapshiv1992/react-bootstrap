@@ -5,10 +5,10 @@ const SelectService = ({dripData}) => {
     const elements = dripData.map(({dripText, dripName}) =>
         <div>
             <Row>
-                <Col sm={8}><h2>{dripName}</h2>
+                <Col sm={10}><h2>{dripName}</h2>
                     <div>{dripText}</div>
                 </Col>
-                <Col sm={3}><Button variant="outline-secondary">Select</Button></Col>
+                <Col sm={1}><Button variant="outline-secondary">Select</Button></Col>
             </Row>
             <hr/>
         </div>
