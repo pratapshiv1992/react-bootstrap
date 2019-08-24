@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 
 const SelectService = ({dripData}) => {
-    return dripData.map(({dripText, dripName}) =>
+    const elements = dripData.map(({dripText, dripName}) =>
         <div>
             <Row>
                 <Col sm={8}><h2>{dripName}</h2>
@@ -13,6 +13,10 @@ const SelectService = ({dripData}) => {
             <hr/>
         </div>
     );
+    return <div>
+        <label>Select an IV Drip</label>
+        {elements}
+    </div>
 }
 
 export default SelectService;
