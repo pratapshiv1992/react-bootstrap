@@ -1,15 +1,17 @@
 import React from 'react';
-import {Tab,Row,Col,Nav,Button} from 'react-bootstrap';
+import {Tab,Row,Col,Nav} from 'react-bootstrap';
+import SelectService from '../components/SelectService';
 
-const msg = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
-const SelectServive = ({msg,drip})=>{
-    return <Row>
-            <Col sm={9}>
-                <h2>{drip}</h2><div>{msg}</div>
-            </Col>
-            <Col sm={3}><Button variant="outline-secondary">Select</Button></Col>
-        </Row>
-}
+const Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+
+const dripData = [
+    {dripName:"Drip #1",dripText:Text},
+    {dripName:"Drip #2",dripMessage:Text},
+    {dripName:"Drip #3",dripMessage:Text},
+    {dripName:"Drip #4",dripMessage:Text}
+]
+
+
 const BookAService = ()=> {
     return (
         <div>
@@ -26,10 +28,10 @@ const BookAService = ()=> {
                     </Col>
                     <Col sm={9}>
                         <Tab.Content>
-                            <Tab.Pane eventKey="selectService"><SelectServive msg={msg} drip={"Drip #1"} /></Tab.Pane>
-                            <Tab.Pane eventKey="dateTime"><SelectServive msg={msg} drip={"Drip #2"} /></Tab.Pane>
-                            <Tab.Pane eventKey="payment"><SelectServive msg={msg} drip={"Drip #3"} /></Tab.Pane>
-                            <Tab.Pane eventKey="bookIt"><SelectServive msg={msg} drip={"Drip #4"} /></Tab.Pane>
+                            <Tab.Pane eventKey="selectService"><SelectService dripData={dripData} /></Tab.Pane>
+                            <Tab.Pane eventKey="dateTime">Date Time</Tab.Pane>
+                            <Tab.Pane eventKey="payment">Payment</Tab.Pane>
+                            <Tab.Pane eventKey="bookIt">Book It</Tab.Pane>
                         </Tab.Content>
                     </Col>
                 </Row>
