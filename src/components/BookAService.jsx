@@ -1,13 +1,15 @@
 import React from 'react';
 import {Tab, Row, Col, Nav} from 'react-bootstrap';
 import SelectService from '../components/SelectService';
+import ServiceDateTime from '../components/ServiceDateTime';
 import {dripData} from '../resources/dummyData';
+import {days, timeSlots} from '../resources/dummyData';
 
 const BookAService = () => {
     return (
         <div>
             <div>Book a service</div>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="selectService">
+            <Tab.Container id="left-tabs-example" defaultActiveKey="dateTime">
                 <Row>
                     <Col sm={3}>
                         <Nav variant="tabs" className="flex-column">
@@ -20,7 +22,7 @@ const BookAService = () => {
                     <Col sm={9}>
                         <Tab.Content>
                             <Tab.Pane eventKey="selectService"><SelectService dripData={dripData}/></Tab.Pane>
-                            <Tab.Pane eventKey="dateTime">Date Time</Tab.Pane>
+                            <Tab.Pane eventKey="dateTime"><ServiceDateTime days={days} timeSlots={timeSlots} /></Tab.Pane>
                             <Tab.Pane eventKey="payment">Payment</Tab.Pane>
                             <Tab.Pane eventKey="bookIt">Book It</Tab.Pane>
                         </Tab.Content>
