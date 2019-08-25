@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, Button} from 'react-bootstrap';
+import {Row, Col, Button,Container} from 'react-bootstrap';
 
 const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
     const elements = dripData.map(({dripText, dripName}) =>
@@ -22,10 +22,10 @@ const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
             <hr/>
         </div>
     );
-    return <div>
+    return <Container>
         <label>Select an IV Drip</label>
         {elements}
-    </div>
+    </Container>
 }
 
 export default SelectService;
