@@ -33,7 +33,7 @@ const ServiceDateTime = ({days, timeSlots, selectedService={}}) => {
     return <div>
         <h3>You're booking {selectedService.dripName} (60 Minute duration)</h3>
         <Calendar />
-        <table class="table table-borderless">
+        <table className="table table-borderless table-responsive ">
             <TableHead days={days}/>
             <TableBody timeSlots={timeSlots}/>
         </table>
