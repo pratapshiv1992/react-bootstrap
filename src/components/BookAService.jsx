@@ -15,7 +15,7 @@ import {prepareBookedData,getCuurentWeekDateSlotArray} from '../utils';
 
 const timeSlots = getCuurentWeekDateSlotArray();
 const TabLinks = ({data, activeKey}) => {
-    const navItemElements = data.map(({eventKey, label, defaultLink}) => <Nav.Item className={"navItem"}>
+    const navItemElements = data.map(({eventKey, label, defaultLink},i) => <Nav.Item key={i+""} className={"navItem"}>
         <Nav.Link eventKey={eventKey} disabled={defaultLink || activeKey === eventKey ? false : true}>{label}</Nav.Link>
     </Nav.Item>);
     return <Nav variant="tabs" className="flex-column">

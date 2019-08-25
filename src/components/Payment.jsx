@@ -2,8 +2,8 @@ import React from 'react';
 import {Row, Col, Button, Container} from 'react-bootstrap';
 
 const Payment = ({availableCreditLabel, availableCreditOption, selectCreditLabel, selectCreditOption, setActiveKey, selectedDate, selectedService}) => {
-    const availableCreditElements = availableCreditOption.map(({text}) =>
-        <div>
+    const availableCreditElements = availableCreditOption.map(({text},i) =>
+        <div key={i+""}>
             <Row className={"padding-btm20"}>
                 <Col sm={8}>
                     <div className={"h5 rm-padding"}>{text}</div>
@@ -20,8 +20,8 @@ const Payment = ({availableCreditLabel, availableCreditOption, selectCreditLabel
             </Row>
         </div>
     );
-    const selectCreditElements = selectCreditOption.map(({text}) =>
-        <Row className={"padding-btm20"}>
+    const selectCreditElements = selectCreditOption.map(({text},i) =>
+        <Row key={i+""} className={"padding-btm20"}>
             <Col sm={8}>
                 <div className={"h5 rm-padding"}>{text}</div>
             </Col>

@@ -4,14 +4,14 @@ import {MDBIcon} from 'mdbreact';
 import {getFormattedTime,getWeekOf} from '../utils';
 
 const TableHead = ({days}) => {
-    const thElements = days.map((day) => <th scope="col" className={"fontArial"}>{day}</th>);
+    const thElements = days.map((day,i) => <th key={i+""} scope="col" className={"fontArial"}>{day}</th>);
     return <thead>
     <tr>{thElements}</tr>
     </thead>
 }
 
 const TableBody = ({timeSlots = [], setActiveKey, setSelectedDate}) => {
-    const rowElements = timeSlots.map((slot) => (<tr>{slot.map(date => (<td scope="row">
+    const rowElements = timeSlots.map((slot,i) => (<tr key={i+""}>{slot.map((date,i) => (<td key={i+""}>
         <button className={"button"} onClick={(e) => {
             setActiveKey('payment');
             setSelectedDate(date);

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, Button, Container} from 'react-bootstrap';
+import {Row, Col, Container} from 'react-bootstrap';
 import {getFormattedTime} from '../utils';
 
 const ServiceBooked = ({bookedData}) => {

@@ -2,8 +2,8 @@ import React from 'react';
 import {Row, Col, Button,Container} from 'react-bootstrap';
 
 const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
-    const elements = dripData.map(({dripText, dripName}) =>
-        <div>
+    const elements = dripData.map(({dripText, dripName},i) =>
+        <div key={i+""}>
             <Row>
                 <Col sm={10}><h2 className={"color-00"}>{dripName}</h2>
                     <h5 className={"h5 rm-padding color-61"}>{dripText}</h5>

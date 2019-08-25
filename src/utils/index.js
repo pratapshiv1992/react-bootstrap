@@ -19,7 +19,6 @@ export const getWeekOf = ()=>{
 
 export const getCuurentWeekDateSlotArray = ()=>{
     const startOfWeek = moment().startOf('isoWeek');
-    const endOfWeek = moment().endOf('isoWeek');
     const weekDateSlotArray = [];
     let day = startOfWeek, slotsArray = [], slot = "",dayCount= 0;
     while (dayCount <7) {
