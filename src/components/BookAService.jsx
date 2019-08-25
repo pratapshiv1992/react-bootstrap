@@ -14,15 +14,23 @@ const TabLinks = ({data, activeKey}) => {
     </Nav>
 }
 
-const BookAService = () => {
+const BookAService = (props) => {
     const [selectedService, setSelectedService] = React.useState({});
     const [activeKey, setActiveKey] = React.useState("selectService");
 
     return (
         <Container>
-            <div className={"div"}>BOOK A SERVICE</div>
+            <Row>
+                <Col sm={4}><div className="div">BOOK A SERVICE</div></Col>
+                <Col sm={8}>{Object.keys(selectedService).length >0 && <h5>You're booking <strong>{selectedService.dripName}</strong>(60 Minute duration)</h5>}</Col>
+            </Row>
             <Tab.Container id="left-tabs-example" activeKey={activeKey} defaultActiveKey={activeKey}
-                           onSelect={(value) => value === "selectService" && setActiveKey(value)}>
+                           onSelect={(value) =>{
+                               if(value === "selectService") {
+                                   setActiveKey(value);
+                                   setSelectedService({});
+                               }
+                           }}>
                 <Row>
                     <Col sm={3}><TabLinks data={tabLinksData} activeKey={activeKey}/></Col>
                     <Col sm={9}>

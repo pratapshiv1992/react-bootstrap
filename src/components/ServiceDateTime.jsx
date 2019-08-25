@@ -29,9 +29,8 @@ const Calendar = (props)=>{
 
 }
 
-const ServiceDateTime = ({days, timeSlots, selectedService={}}) => {
+const ServiceDateTime = ({days, timeSlots}) => {
     return <div>
-        <h3>You're booking {selectedService.dripName} (60 Minute duration)</h3>
         <Calendar />
         <table className="table table-borderless table-responsive ">
             <TableHead days={days}/>
