@@ -9,7 +9,7 @@ export const dripData = [
 
 export const tabLinksData = [
     {eventKey: "selectService", label: "Select service", defaultLink: true},
-    {eventKey: "dateTime", label: "Date/Time"},
+    {eventKey: "dateTime", label: "Date / Time"},
     {eventKey: "payment", label: "Payment"},
     {eventKey: "bookIt", label: "Book it"}
 ];

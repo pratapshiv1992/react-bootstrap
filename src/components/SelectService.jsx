@@ -9,7 +9,7 @@ const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
                     <div>{dripText}</div>
                 </Col>
                 <Col sm={1}>
-                    <Button className={"button service-btn"}
+                    <Button className={"padding5-13 service-btn"}
                         variant="outline-secondary"
                         value={33}
                         onClick={(e) => {

@@ -5,7 +5,7 @@
 }
 
 .navlink {
-    color: #696563 !important;
+    color: #484747e3 !important;
     font-weight: bolder;
     font-size: large;
     font-family: Arial;
@@ -18,7 +18,7 @@
 }
 
 .div {
-    color: #696563 !important;
+    color: #484747e3 !important;
     font-weight: bolder;
     font-family: Arial;
     font-size: large;
@@ -57,17 +57,20 @@
 }
 
 .service-btn{
+    background-color: white !important;
+    color: #000000ab !important;
+    border: 1px solid;
     padding: 5px 25px;
-    max-width: fit-content;
+    font-weight: bold;
     font-size: large;
-    font-weight: 400;
-    color: black;
     border-radius: 0;
+    text-transform: uppercase;
+    font-family: sans-serif;
 }
 
-.payment-container{
-    border: .5px solid black;
-    margin-bottom: 16px;
+.border{
+    border: 1.5px solid #867f7f !important;
+    margin-top: 30px;
 }
 
 .icon{
@@ -89,9 +92,32 @@
 }
 
 .h5{
-    background-color: #e3e1e1;
     color:#2e2b2bf2;
     padding: 10px 20px;
     max-width: 715px;
     font-family: Arial;
+}
+
+.bgcolor-e3{
+    background-color: #e3e1e1;
+}
+
+.rm-padding{
+    padding: 0px;
+}
+
+.pmt-heading{
+    color: #484747e3 !important;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 10px 0px 10px;
+    font-family: Arial;
+}
+
+.padding-btm20{
+    padding-bottom: 20px;
+}
+
+.padding5-13{
+    padding: 5px 13px !important;
 }

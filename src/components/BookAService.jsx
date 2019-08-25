@@ -33,7 +33,7 @@ const BookAService = (props) => {
                     <div className="div">BOOK A SERVICE</div>
                 </Col>
                 <Col sm={9}>{Object.keys(selectedService).length > 0 && activeKey === "dateTime" &&
-                <h5 className={"h5"}> You're booking &nbsp;&nbsp;<strong>{selectedService.dripName}</strong>&nbsp;&nbsp;(60 Minute duration)
+                <h5 className={"h5 bgcolor-e3"}> You're booking &nbsp;&nbsp;<strong>{selectedService.dripName}</strong>&nbsp;&nbsp;(60 Minute duration)
                 </h5>}</Col>
             </Row>
             <Tab.Container id="left-tabs-example" activeKey={activeKey} defaultActiveKey={activeKey}
