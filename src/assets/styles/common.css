@@ -65,3 +65,17 @@
     color: black;
     border-radius: 0;
 }
+
+.icon{
+    font-size: xx-large;
+    float: left;
+}
+
+.label{
+    float: left;
+    padding: 3px 15px;
+}
+
+.inherit{
+    padding-left: inherit;
+}

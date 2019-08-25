@@ -25,9 +25,9 @@ const TableBody = ({timeSlots = [], setActiveKey, setSelectedDate}) => {
 
 const Calendar = (props) => {
     return <Row>
-        <Col xs={4}><MDBIcon icon="angle-left"/><label>PREVIOUS WEEK</label></Col>
+        <Col xs={4}><MDBIcon className={"icon"} icon="caret-left"/><label className={"label"}>PREVIOUS WEEK</label></Col>
         <Col xs={4}><h5>WEEK OF 24/8/19</h5></Col>
-        <Col xs={4}> <label>NEXT WEEK</label><MDBIcon icon="angle-right"/></Col>
+        <Col xs={{ span: 3, offset: 1}} className={"inherit"} > <label className={"label"}>NEXT WEEK</label><MDBIcon className={"icon"} icon="caret-right"/></Col>
     </Row>
 
 }
