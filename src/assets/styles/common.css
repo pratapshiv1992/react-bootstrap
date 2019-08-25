@@ -35,3 +35,24 @@
 .col-sm-3, .col-sm-9 {
     padding: 0px !important;
 }
+
+.button{
+    background-color: white;
+    color: grey;
+    border: 1px solid;
+    padding: 8px 17px;
+    font-weight: bold;
+    max-width: 90px;
+    font-variant-caps: small-caps;
+}
+
+.table td, .table th {
+    padding: 5px;
+}
+
+.fontArial {
+    font-weight: lighter;
+    font-size: medium;
+    font-family: Arial;
+    color: black;
+}

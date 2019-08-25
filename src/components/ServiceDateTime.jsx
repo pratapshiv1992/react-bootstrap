@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdbreact';
 import {getFormattedTime} from '../utils';
 
 const TableHead = ({days}) => {
-    const thElements = days.map((day) => <th scope="col">{day}</th>);
+    const thElements = days.map((day) => <th scope="col" className={"fontArial"}>{day}</th>);
     return <thead>
     <tr>{thElements}</tr>
     </thead>
@@ -12,7 +12,7 @@ const TableHead = ({days}) => {
 
 const TableBody = ({timeSlots = []}) => {
     const rowElements = timeSlots.map((slot) => (<tr>{slot.map(date => (<td scope="row">
-        <button>{getFormattedTime({date})}</button>
+        <button className={"button"}>{getFormattedTime({date})}</button>
     </td>))}</tr>));
     return <tbody>
     {rowElements}
