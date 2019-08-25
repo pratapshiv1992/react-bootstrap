@@ -29,7 +29,7 @@
 .navItem {
     font-size: large;
     font-family: Arial;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
 }
 
 .col-sm-3, .col-sm-9 {
@@ -55,4 +55,13 @@
     font-size: medium;
     font-family: Arial;
     color: black;
+}
+
+.service-btn{
+    padding: 5px 25px;
+    max-width: fit-content;
+    font-size: large;
+    font-weight: 400;
+    color: black;
+    border-radius: 0;
 }
