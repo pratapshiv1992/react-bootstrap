@@ -12,18 +12,18 @@ export const prepareBookedData = ({selectedService: {dripName}, selectedDate: da
     return defaultBookedData;
 }
 
-export const getWeekOf = ()=>{
+export const getWeekOf = () => {
     const startOfWeek = moment().startOf('isoWeek');
-    return getFormattedTime({date:startOfWeek.toDate(),format:"M/D/YYYY"})
+    return getFormattedTime({date: startOfWeek.toDate(), format: "M/D/YYYY"})
 }
 
-export const getCuurentWeekDateSlotArray = ()=>{
+export const getCuurentWeekDateSlotArray = () => {
     const startOfWeek = moment().startOf('isoWeek');
     const weekDateSlotArray = [];
-    let day = startOfWeek, slotsArray = [], slot = "",dayCount= 0;
-    while (dayCount <7) {
+    let day = startOfWeek, slotsArray = [], slot = "", dayCount = 0;
+    while (dayCount < 7) {
         let i = 0;
-        slot = day.clone().add(dayCount+7, 'hours');
+        slot = day.clone().add(dayCount + 7, 'hours');
         while (i < 7) {
             slotsArray.push(slot.toDate());
             slot = slot.clone().add(1, 'd');
@@ -35,4 +35,20 @@ export const getCuurentWeekDateSlotArray = ()=>{
         ++dayCount;
     }
     return weekDateSlotArray;
+}
+
+
+export const getClassName = (activeKey) => {
+    switch (activeKey) {
+        case "selectService":
+            return "padding-top-14"
+        case "dateTime":
+            return "padding-top-55"
+        case "payment":
+            return "padding-top-96"
+        case "bookIt":
+            return "padding-top-137"
+        default:
+            return "padding-top-14"
+    }
 }

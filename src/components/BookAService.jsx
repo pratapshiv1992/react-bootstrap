@@ -11,11 +11,13 @@ import {
     selectCreditLabel,
     selectCreditOption
 } from '../resources/dummyData';
-import {prepareBookedData,getCuurentWeekDateSlotArray} from '../utils';
+import {prepareBookedData, getCuurentWeekDateSlotArray, getClassName} from '../utils';
+import {MDBIcon} from "mdbreact";
 
 const timeSlots = getCuurentWeekDateSlotArray();
 const TabLinks = ({data, activeKey}) => {
-    const navItemElements = data.map(({eventKey, label, defaultLink},i) => <Nav.Item key={i+""} className={"navItem"}>
+    const navItemElements = data.map(({eventKey, label, defaultLink}, i) => <Nav.Item key={i + ""}
+                                                                                      className={"navItem"}>
         <Nav.Link eventKey={eventKey} disabled={defaultLink || activeKey === eventKey ? false : true}>{label}</Nav.Link>
     </Nav.Item>);
     return <Nav variant="tabs" className="flex-column">
@@ -27,6 +29,7 @@ const BookAService = (props) => {
     const [selectedService, setSelectedService] = React.useState({});
     const [activeKey, setActiveKey] = React.useState("selectService");
     const [selectedDate, setSelectedDate] = React.useState(null);
+    const paddingTop = getClassName(activeKey);
 
     return (
         <Container>
@@ -35,7 +38,8 @@ const BookAService = (props) => {
                     <div className="div">BOOK A SERVICE</div>
                 </Col>
                 <Col sm={9}>{Object.keys(selectedService).length > 0 && activeKey === "dateTime" &&
-                <h5 className={"h5 bgcolor-e3"}> You're booking &nbsp;&nbsp;<strong>{selectedService.dripName}</strong>&nbsp;&nbsp;
+                <h5 className={"h5 bgcolor-e3"}> You're booking &nbsp;&nbsp;
+                    <strong>{selectedService.dripName}</strong>&nbsp;&nbsp;
                     (60 Minute duration)
                 </h5>}</Col>
             </Row>
@@ -47,7 +51,9 @@ const BookAService = (props) => {
                                }
                            }}>
                 <Row>
-                    <Col sm={3}><TabLinks data={tabLinksData} activeKey={activeKey}/></Col>
+                    <Col sm={2} className={"verticle-line"}><MDBIcon className={`verticle-point ${paddingTop}`}
+                                                                     icon="circle"/><TabLinks data={tabLinksData}
+                                                                                              activeKey={activeKey}/></Col>
                     <Col sm={9}>
                         <Tab.Content>
                             <Tab.Pane eventKey="selectService"><SelectService dripData={dripData}

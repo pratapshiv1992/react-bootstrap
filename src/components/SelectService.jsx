@@ -1,9 +1,9 @@
 import React from 'react';
-import {Row, Col, Button,Container} from 'react-bootstrap';
+import {Row, Col, Button, Container} from 'react-bootstrap';
 
 const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
-    const elements = dripData.map(({dripText, dripName},i) =>
-        <div key={i+""}>
+    const elements = dripData.map(({dripText, dripName}, i) =>
+        <div key={i + ""}>
             <Row>
                 <Col sm={10}><h2 className={"color-00"}>{dripName}</h2>
                     <h5 className={"h5 rm-padding color-61"}>{dripText}</h5>
@@ -11,12 +11,12 @@ const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
                 </Col>
                 <Col sm={1}>
                     <Button className={"padding5-13 service-btn"}
-                        variant="outline-secondary"
-                        value={33}
-                        onClick={(e) => {
-                            setSelectedService({dripText, dripName});
-                            setActiveKey('dateTime');
-                        }}>
+                            variant="outline-secondary"
+                            value={33}
+                            onClick={(e) => {
+                                setSelectedService({dripText, dripName});
+                                setActiveKey('dateTime');
+                            }}>
                         Select
                     </Button></Col>
             </Row>
