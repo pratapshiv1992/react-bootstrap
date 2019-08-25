@@ -1,5 +1,6 @@
 import React from 'react';
 import {getFormattedTime} from '../utils';
+
 const TableHead = ({days}) => {
     const thElements = days.map((day) => <th scope="col">{day}</th>);
     return <thead>
@@ -14,9 +15,10 @@ const TableBody = ({timeSlots = []}) => {
     return <tbody>
     {rowElements}
     </tbody>
+
 }
 
-const ServiceDateTime = ({days, timeSlots, selectedService={}}) => {
+const ServiceDateTime = ({days, timeSlots, selectedService = {}}) => {
     return <div>
         <h3>You're booking {selectedService.dripName} (60 Minute duration)</h3>
         <table class="table table-borderless">
