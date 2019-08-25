@@ -5,26 +5,26 @@ import {getFormattedTime} from '../utils';
 const ServiceBooked = ({bookedData}) => {
     const rowElements = (bookedData || []).map(({dripName, duration, date, amount}) =>
         <Row>
-            <Col xs={4}><h4>{dripName}</h4>
-                <div>Service Summary</div>
-                <div>{duration}</div>
+            <Col xs={4}><h3 >{dripName}</h3>
+                <div className={"h5 rm-padding"}>Service Summary</div>
+                <div className={"h5 rm-padding"}>{duration}</div>
             </Col>
-            <Col xs={4}>
-                <div>{getFormattedTime({date, format: "dddd MMM Qo"})}</div>
-                <div>{getFormattedTime({date})}</div>
+            <Col xs={{span: 4, offset: 1}}>
+                <div className={"h5 rm-padding"}>{getFormattedTime({date, format: "dddd MMM Qo"})}</div>
+                <div className={"h5 rm-padding"}>{getFormattedTime({date})}</div>
             </Col>
-            <Col xs={4}>{amount}</Col>
+            <Col xs={{span: 2, offset: 1}} className={"h5 rm-padding"}>{amount}</Col>
         </Row>);
 
     return <Container>
-        <div>You're Booked!</div>
+        <h5 className={"h5 rm-padding"}>You're Booked!</h5>
         {rowElements}
-        <hr/>
-        <button className={""} onClick={(e) => {
+        <hr className={"border"}/>
+        <button className={"service-btn booktreat-btn"} onClick={(e) => {
             console.log('BOOK ANOTHER TREATMENT CLICKED');
         }}>BOOK ANOTHER TREATMENT
         </button>
-        <button className={""} onClick={(e) => {
+        <button className={"service-btn reffrn-btn"} onClick={(e) => {
             console.log('REFER A FRIEND CLICKED');
         }}>REFER A FRIEND
         </button>
