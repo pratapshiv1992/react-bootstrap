@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import {MDBIcon} from 'mdbreact';
-import {getFormattedTime} from '../utils';
+import {getFormattedTime,getWeekOf} from '../utils';
 
 const TableHead = ({days}) => {
     const thElements = days.map((day) => <th scope="col" className={"fontArial"}>{day}</th>);
@@ -26,7 +26,7 @@ const TableBody = ({timeSlots = [], setActiveKey, setSelectedDate}) => {
 const Calendar = (props) => {
     return <Row>
         <Col xs={4}><MDBIcon className={"icon"} icon="caret-left"/><label className={"label"}>PREVIOUS WEEK</label></Col>
-        <Col xs={4}><h5 className={"color-48"}>WEEK OF 24/8/19</h5></Col>
+        <Col xs={4}><h5 className={"color-48"}>WEEK OF {getWeekOf()}</h5></Col>
         <Col xs={{ span: 3, offset: 1}} className={"inherit"} > <label className={"label"}>NEXT WEEK</label><MDBIcon className={"icon"} icon="caret-right"/></Col>
     </Row>
 

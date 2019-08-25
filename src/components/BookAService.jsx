@@ -6,14 +6,14 @@ import Payment from '../components/Payment';
 import ServiceBooked from '../components/ServiceBooked';
 import {dripData, tabLinksData} from '../resources/dummyData';
 import {
-    days, timeSlots, availableCreditLabel,
+    days, availableCreditLabel,
     availableCreditOption,
     selectCreditLabel,
     selectCreditOption
 } from '../resources/dummyData';
-import {prepareBookedData} from '../utils';
+import {prepareBookedData,getCuurentWeekDateSlotArray} from '../utils';
 
-
+const timeSlots = getCuurentWeekDateSlotArray();
 const TabLinks = ({data, activeKey}) => {
     const navItemElements = data.map(({eventKey, label, defaultLink}) => <Nav.Item className={"navItem"}>
         <Nav.Link eventKey={eventKey} disabled={defaultLink || activeKey === eventKey ? false : true}>{label}</Nav.Link>

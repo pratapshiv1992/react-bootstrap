@@ -10,7 +10,7 @@ const ServiceBooked = ({bookedData}) => {
                 <div>{duration}</div>
             </Col>
             <Col xs={4}>
-                <div>{getFormattedTime({date, format: "dddd MMM Qo"})}</div>
+                <div>{getFormattedTime({date, format: "dddd MMM Do"})}</div>
                 <div>{getFormattedTime({date})}</div>
             </Col>
             <Col xs={4}>{amount}</Col>
