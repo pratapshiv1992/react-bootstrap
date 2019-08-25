@@ -2,6 +2,7 @@ import React from 'react';
 import {Tab, Row, Col, Nav, Container} from 'react-bootstrap';
 import SelectService from '../components/SelectService';
 import ServiceDateTime from '../components/ServiceDateTime';
+import Payment from '../components/Payment';
 import {dripData, tabLinksData} from '../resources/dummyData';
 import {days, timeSlots} from '../resources/dummyData';
 
@@ -17,6 +18,7 @@ const TabLinks = ({data, activeKey}) => {
 const BookAService = (props) => {
     const [selectedService, setSelectedService] = React.useState({});
     const [activeKey, setActiveKey] = React.useState("selectService");
+    const [selectedDate, setSelectedDate] = React.useState(null);
 
     return (
         <Container>
@@ -38,9 +40,13 @@ const BookAService = (props) => {
                             <Tab.Pane eventKey="selectService"><SelectService dripData={dripData}
                                                                               setActiveKey={setActiveKey}
                                                                               setSelectedService={setSelectedService}/></Tab.Pane>
-                            <Tab.Pane eventKey="dateTime"><ServiceDateTime selectedService={selectedService} days={days}
-                                                                           timeSlots={timeSlots}/></Tab.Pane>
-                            <Tab.Pane eventKey="payment">Payment</Tab.Pane>
+                            <Tab.Pane eventKey="dateTime"><ServiceDateTime selectedService={selectedService}
+                                                                           days={days}
+                                                                           timeSlots={timeSlots}
+                                                                           setActiveKey={setActiveKey}
+                                                                           setSelectedDate={setSelectedDate}
+                            /></Tab.Pane>
+                            <Tab.Pane eventKey="payment"><Payment selectedDate={selectedDate} selectedService={selectedService} /></Tab.Pane>
                             <Tab.Pane eventKey="bookIt">Book It</Tab.Pane>
                         </Tab.Content>
                     </Col>

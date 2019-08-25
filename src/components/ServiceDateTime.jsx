@@ -10,9 +10,12 @@ const TableHead = ({days}) => {
     </thead>
 }
 
-const TableBody = ({timeSlots = []}) => {
+const TableBody = ({timeSlots = [], setActiveKey, setSelectedDate}) => {
     const rowElements = timeSlots.map((slot) => (<tr>{slot.map(date => (<td scope="row">
-        <button className={"button"}>{getFormattedTime({date})}</button>
+        <button className={"button"} onClick={(e)=>{
+            setActiveKey('payment');
+            setSelectedDate(date);
+        }} >{getFormattedTime({date})}</button>
     </td>))}</tr>));
     return <tbody>
     {rowElements}
@@ -29,12 +32,12 @@ const Calendar = (props)=>{
 
 }
 
-const ServiceDateTime = ({days, timeSlots}) => {
+const ServiceDateTime = ({days, timeSlots, setActiveKey, setSelectedDate}) => {
     return <div>
         <Calendar />
         <table className="table table-borderless table-responsive ">
             <TableHead days={days}/>
-            <TableBody timeSlots={timeSlots}/>
+            <TableBody timeSlots={timeSlots} setActiveKey={setActiveKey} setSelectedDate={setSelectedDate} />
         </table>
     </div>
 }
