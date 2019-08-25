@@ -7,6 +7,13 @@ export const dripData = [
     {dripName: "DRIP #3", dripText: Text}
 ];
 
+export const tabLinksData = [
+    {eventKey: "selectService", label: "Select service",defaultLink:true},
+    {eventKey: "dateTime", label: "Date/Time"},
+    {eventKey: "payment", label: "Payment"},
+    {eventKey: "bookIt", label: "Book it"}
+];
+
 export const days = [
     "Monday",
     "Tuesday",
