@@ -16,7 +16,7 @@ const ServiceBooked = ({bookedData}) => {
             <Col xs={{span: 2, offset: 1}} className={"h5 rm-padding"}>{amount}</Col>
         </Row>);
 
-    return <Container>
+    return <div className={"margin-left-27"}>
         <h5 className={"h5 rm-padding"}>You're Booked!</h5>
         {rowElements}
         <hr className={"border"}/>
@@ -28,7 +28,7 @@ const ServiceBooked = ({bookedData}) => {
             console.log('REFER A FRIEND CLICKED');
         }}>REFER A FRIEND
         </button>
-    </Container>
+    </div>
 }
 
 export default ServiceBooked;

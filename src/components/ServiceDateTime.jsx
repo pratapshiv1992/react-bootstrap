@@ -35,7 +35,7 @@ const Calendar = (props) => {
 }
 
 const ServiceDateTime = ({days, timeSlots, setActiveKey, setSelectedDate}) => {
-    return <div>
+    return <div className={"margin-left-27"}>
         <Calendar/>
         <table className="table table-borderless table-responsive ">
             <TableHead days={days}/>

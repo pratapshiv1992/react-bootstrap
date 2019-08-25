@@ -132,27 +132,28 @@
 }
 
 .reffrn-btn {
-    padding: 35px 70px;
+    padding: 5% 10%;
 }
 
 .booktreat-btn {
-    padding: 35px 80px;
+    padding: 5% 7%;
     margin-right: 25px;
 }
 
 .verticle-line {
     border-right: 2px solid black;
     max-height: 587px;
-    margin-right: 15px;
     padding-left: 0px;
+    max-height: 587px;
+    max-width: 232px;
 }
 
 
 .verticle-point {
-    padding-left: 96%;
+    margin-left: 97%;
     position: absolute;
     color: black;
-    z-index: -1;
+    z-index: 1;
 }
 
 .padding-top-14 {
@@ -182,22 +183,6 @@
     }
 }
 
-@media screen and (max-width: 1199px) {
-
-    .padding-top-14 {
-        padding-top: 24px;
-    }
-
-    .padding-top-55 {
-        padding-top: 81px;
-    }
-
-    .padding-top-96 {
-        padding-top: 122px;
-    }
-
-    .padding-top-137 {
-        padding-top: 163px;
-    }
-
+.margin-left-27 {
+    margin-left: 27px;
 }

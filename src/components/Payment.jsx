@@ -36,7 +36,7 @@ const Payment = ({availableCreditLabel, availableCreditOption, selectCreditLabel
                 </Button></Col>
         </Row>
     );
-    return <div>
+    return <div className={"margin-left-27"}>
         <h6 className={"h5 rm-padding"}>How would you like to book your {`IV ${selectedService.dripName}`}</h6>
         <Container className={"border"}><label className={"pmt-heading"}>{availableCreditLabel}</label>
             {availableCreditElements}</Container>

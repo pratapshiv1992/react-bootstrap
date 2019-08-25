@@ -23,10 +23,10 @@ const SelectService = ({dripData, setSelectedService, setActiveKey}, i) => {
             <hr/>
         </div>
     );
-    return <Container>
+    return <div className={"margin-left-27"}>
         <label className={"h5 rm-padding color-00"}>Select an IV Drip</label>
         {elements}
-    </Container>
+    </div>
 }
 
 export default SelectService;

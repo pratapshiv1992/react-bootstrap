@@ -51,7 +51,7 @@ const BookAService = (props) => {
                                }
                            }}>
                 <Row>
-                    <Col sm={2} className={"verticle-line"}><MDBIcon className={`verticle-point ${paddingTop}`}
+                    <Col sm={3} className={"verticle-line"}><MDBIcon className={`verticle-point ${paddingTop}`}
                                                                      icon="circle"/><TabLinks data={tabLinksData}
                                                                                               activeKey={activeKey}/></Col>
                     <Col sm={9}>
