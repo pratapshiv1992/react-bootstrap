@@ -8,10 +8,24 @@ export const dripData = [
 ];
 
 export const tabLinksData = [
-    {eventKey: "selectService", label: "Select service",defaultLink:true},
+    {eventKey: "selectService", label: "Select service", defaultLink: true},
     {eventKey: "dateTime", label: "Date/Time"},
     {eventKey: "payment", label: "Payment"},
     {eventKey: "bookIt", label: "Book it"}
+];
+
+export const availableCreditLabel = "Available Credits";
+
+export const availableCreditOption = [
+    {text: "You have 2 IV Drip credits available to use"},
+];
+
+export const selectCreditLabel = "Select a credit option";
+
+export const selectCreditOption = [
+    {text: "Single IV | expiration | $60"},
+    {text: "3 pack of IV | expiration | $300"},
+    {text: "6 pack of IV | expiration | $600"}
 ];
 
 export const days = [

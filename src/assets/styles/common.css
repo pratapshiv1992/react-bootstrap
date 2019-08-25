@@ -66,6 +66,11 @@
     border-radius: 0;
 }
 
+.payment-container{
+    border: .5px solid black;
+    margin-bottom: 16px;
+}
+
 .icon{
     font-size: xx-large;
     float: left;

@@ -4,7 +4,13 @@ import SelectService from '../components/SelectService';
 import ServiceDateTime from '../components/ServiceDateTime';
 import Payment from '../components/Payment';
 import {dripData, tabLinksData} from '../resources/dummyData';
-import {days, timeSlots} from '../resources/dummyData';
+import {
+    days, timeSlots, availableCreditLabel,
+    availableCreditOption,
+    selectCreditLabel,
+    selectCreditOption
+} from '../resources/dummyData';
+
 
 const TabLinks = ({data, activeKey}) => {
     const navItemElements = data.map(({eventKey, label, defaultLink}) => <Nav.Item className={"navItem"}>
@@ -26,7 +32,7 @@ const BookAService = (props) => {
                 <Col sm={4}>
                     <div className="div">BOOK A SERVICE</div>
                 </Col>
-                <Col sm={8}>{Object.keys(selectedService).length > 0 &&
+                <Col sm={8}>{Object.keys(selectedService).length > 0 && activeKey === "dateTime" &&
                 <h5>You're booking <strong>{selectedService.dripName}</strong>(60 Minute duration)</h5>}</Col>
             </Row>
             <Tab.Container id="left-tabs-example" activeKey={activeKey} defaultActiveKey={activeKey}
@@ -50,7 +56,13 @@ const BookAService = (props) => {
                                                                            setSelectedDate={setSelectedDate}
                             /></Tab.Pane>
                             <Tab.Pane eventKey="payment"><Payment selectedDate={selectedDate}
-                                                                  selectedService={selectedService}/></Tab.Pane>
+                                                                  selectedService={selectedService}
+                                                                  availableCreditLabel={availableCreditLabel}
+                                                                  availableCreditOption={availableCreditOption}
+                                                                  selectCreditLabel={selectCreditLabel}
+                                                                  selectCreditOption={selectCreditOption}
+                                                                  setActiveKey={setActiveKey}
+                            /></Tab.Pane>
                             <Tab.Pane eventKey="bookIt">Book It</Tab.Pane>
                         </Tab.Content>
                     </Col>
