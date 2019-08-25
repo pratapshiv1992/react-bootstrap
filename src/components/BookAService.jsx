@@ -23,12 +23,15 @@ const BookAService = (props) => {
     return (
         <Container>
             <Row>
-                <Col sm={4}><div className="div">BOOK A SERVICE</div></Col>
-                <Col sm={8}>{Object.keys(selectedService).length >0 && <h5>You're booking <strong>{selectedService.dripName}</strong>(60 Minute duration)</h5>}</Col>
+                <Col sm={4}>
+                    <div className="div">BOOK A SERVICE</div>
+                </Col>
+                <Col sm={8}>{Object.keys(selectedService).length > 0 &&
+                <h5>You're booking <strong>{selectedService.dripName}</strong>(60 Minute duration)</h5>}</Col>
             </Row>
             <Tab.Container id="left-tabs-example" activeKey={activeKey} defaultActiveKey={activeKey}
-                           onSelect={(value) =>{
-                               if(value === "selectService") {
+                           onSelect={(value) => {
+                               if (value === "selectService") {
                                    setActiveKey(value);
                                    setSelectedService({});
                                }
@@ -46,7 +49,8 @@ const BookAService = (props) => {
                                                                            setActiveKey={setActiveKey}
                                                                            setSelectedDate={setSelectedDate}
                             /></Tab.Pane>
-                            <Tab.Pane eventKey="payment"><Payment selectedDate={selectedDate} selectedService={selectedService} /></Tab.Pane>
+                            <Tab.Pane eventKey="payment"><Payment selectedDate={selectedDate}
+                                                                  selectedService={selectedService}/></Tab.Pane>
                             <Tab.Pane eventKey="bookIt">Book It</Tab.Pane>
                         </Tab.Content>
                     </Col>

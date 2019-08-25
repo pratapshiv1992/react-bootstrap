@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Payment = ({selectedDate,selectedService}) => {
+const Payment = ({selectedDate, selectedService}) => {
     return <div>{selectedDate}--{selectedService.dripName}</div>
 }
 
