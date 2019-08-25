@@ -6,9 +6,10 @@ export const getFormattedTime = ({date = new Date(), format = 'h:mma'}) => {
 }
 
 export const prepareBookedData = ({selectedService: {dripName}, selectedDate: date}) => {
-    serviceBookedData[0].date = date;
-    serviceBookedData.unshift({dripName, duration: "60 Minutes", date, amount: "$300"});
-    return serviceBookedData;
+    const defaultBookedData = serviceBookedData();
+    defaultBookedData[0].date = date;
+    defaultBookedData.unshift({dripName, duration: "60 Minutes", date, amount: "$300"});
+    return defaultBookedData;
 }
 
 export const getWeekOf = ()=>{

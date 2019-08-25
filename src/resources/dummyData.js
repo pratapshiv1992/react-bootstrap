@@ -28,7 +28,7 @@ export const selectCreditOption = [
     {text: "6 pack of IV | expiration | $600"}
 ];
 
-export const serviceBookedData = [
+export const serviceBookedData = ()=> [
     {dripName: "IM SHOT #6", duration: "5 Minutes", date: "", amount: "$100"},
 ];
 
