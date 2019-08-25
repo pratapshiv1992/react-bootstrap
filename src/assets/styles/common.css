@@ -22,8 +22,7 @@
     font-weight: bolder;
     font-family: Arial;
     font-size: large;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 0px  0px 25px 15px;
 }
 
 .navItem {
@@ -38,7 +37,7 @@
 
 .button{
     background-color: white;
-    color: grey;
+    color: #424242cc;
     border: 1px solid;
     padding: 8px 17px;
     font-weight: bold;
@@ -79,8 +78,20 @@
 .label{
     float: left;
     padding: 3px 15px;
+    color:#6a6d6f;
 }
 
+.color-48{
+    color:#484747e3;
+}
 .inherit{
     padding-left: inherit;
+}
+
+.h5{
+    background-color: #e3e1e1;
+    color:#2e2b2bf2;
+    padding: 10px 20px;
+    max-width: 715px;
+    font-family: Arial;
 }
