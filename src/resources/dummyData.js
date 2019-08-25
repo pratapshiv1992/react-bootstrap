@@ -1,5 +1,5 @@
 const Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem " +
-    "Ipsum has of the printing and typesetting industry. Lorem Ipsum has $$"
+    "Ipsum has of the printing and typesetting industry. Lorem Ipsum has Ipsum"
 
 export const dripData = [
     {dripName: "DRIP #1", dripText: Text},
