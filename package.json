@@ -1,5 +1,5 @@
 {
-  "name": "react-bootstrap-app",
+  "name": "react-hooks-react-bootstrap-react-custom-components",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,5 +31,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [],
+  "description": "Basic starter kit for react hooks , react-bootstrap, bootstrap and react custom components."
 }
